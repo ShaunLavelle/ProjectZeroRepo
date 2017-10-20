@@ -14,9 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DashboardController {
 
-  @RequestMapping("/Dashboard")
+  @RequestMapping(value={"", "/", "/Dashboard"})
   public String dashboard(Map<String, Object> model) {
-    model.put("greeting", "Dashboard");
-    return "dashboard";
+    return "index";
   }
 }
